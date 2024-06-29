@@ -15,7 +15,7 @@ Activate the virtual environment:
 
 Bash
 
-`   source my_env/bin/activate  
+`   source my_env/bin/activate  `
 
 **2\. Install Required Packages:**
 
@@ -31,6 +31,6 @@ If you have a Streamlit app script named app.py in your project directory, you c
 
 Bash
 
-   streamlit run app.py   `
+ `  streamlit run app.py   `
 
 This will launch the Streamlit app in your web browser, typically at http://localhost:8501.
