@@ -17,8 +17,8 @@ class_colors = {
 }
 
 class_names = {
-    1: 'Class 1 Name',  # Replace with actual class names
-    2: 'Class 2 Name'
+    1: 'Marine',  
+    2: 'Trash'
 }
 
 
