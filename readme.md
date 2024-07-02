@@ -38,8 +38,10 @@ Download the dataset and place it in the root directory of this project.
   **Update Dataset and model weights path according to your needs:**
  I assume the dataset is located in the root directory of the project. If you place it in a different location, you will need to update the path at two locations in the code:
 
-*   `data_path` variable in `app.py`
-*   Path argument in the `load_data` function (also in `app.py`)
+*   line 52 model path in `app.py`
+*   line 56 path definition in `rcnn_deploy.py`
+*   line 91 model path in `rcnn_deploy.py`
+*   line 156 model path in `rcnn_deploy.py` 
 
  **Create and Activate Python Virtual Environment:**
  It's recommended to create a virtual environment to isolate project dependencies. Here's an example using `venv`:
