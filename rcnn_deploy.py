@@ -55,10 +55,9 @@ class CustomCSVDetectionDataset(Dataset):
 
 # Define paths
 csv_file = 'Dataset7.0/train/annotations/train_labels.csv'
-images_dir = 'content/drive/MyDrive/Dataset7.0/train/images'
 
 # Create dataset and dataloaders without transformations
-dataset = CustomCSVDetectionDataset(csv_file, images_dir, transforms=None)
+dataset = CustomCSVDetectionDataset(csv_file, transforms=None)
 
 # DataLoader setup
 def collate_fn(batch):
