@@ -1,36 +1,65 @@
-Installing Dependencies and Running the Streamlit App
------------------------------------------------------
+## RCNN Object Detection for Marine Debris Classification with Streamlit
 
-This guide walks you through setting up the environment and running the Streamlit object detection app:
+This project implements an R-CNN object detection model using Streamlit to distinguish between marine debris and trash in images.
+Here are some sample images of how will it look like:
+<div style="text-align:center">
+  <p style="font-size:18px">1. Opening the website: </p>
+  <img src="https://github.com/AmandracOP/RCNN-Object-Detection-Streamlit-App/assets/82217000/4e5bddb8-13b8-4e0b-83ff-b54589f62a55" alt="240628_17h44m26s_screenshot" style="width:50%;"><br>
+</div>
 
-**1\. Create a Virtual Environment (Recommended):**
+<div style="text-align:center">
+  <p style="font-size:18px">2. Adding an Image for testing from gallery: </p>
+  <img src="https://github.com/AmandracOP/RCNN-Object-Detection-Streamlit-App/assets/82217000/92e9cea2-4e8b-4544-8714-ff46b1c1ce8b" alt="240629_17h48m01s_screenshot" style="width:50%;"><br>
+</div>
 
-A virtual environment isolates project dependencies, preventing conflicts with other Python installations. Use the venv module:
+<div style="text-align:center">
+  <p style="font-size:18px">3. Model says it is a Marine: </p>
+  <img src="https://github.com/AmandracOP/RCNN-Object-Detection-Streamlit-App/assets/82217000/1f242024-702b-49e8-a41a-c741c7733586" alt="240629_17h46m23s_screenshot" style="width:50%;"><br>
+</div>
 
-Bash
+<div style="text-align:center">
+  <p style="font-size:18px">4. Model says it is a Trash: </p>
+  <img src="https://github.com/AmandracOP/RCNN-Object-Detection-Streamlit-App/assets/82217000/ad5f1fd9-e916-4017-bd58-1508ddbdf963" alt="240629_17h47m25s_screenshot" style="width:50%;"><br>
+</div>
 
-`   python3 -m venv my_env   `
+**Getting Started**
 
-Activate the virtual environment:
+ **Clone the Repository:**
+  Open your terminal and clone this repository using the following command:
+   ```bash
+   git clone https://github.com/AmandracOP/RCNN-Object-Detection-Streamlit-App.git
+ ```
 
-Bash
+**Download the Dataset:**
+The dataset used to train the model is not included in this repository due to size constraints. You can access the dataset from the following Google Drive link: \[[**Drive Link**](https://drive.google.com/drive/folders/1rdDJD8_JUetdo_3rTnKH8p-Po60amgJK?usp=drive_link)\]
 
-`   source my_env/bin/activate  `
+Download the dataset and place it in the root directory of this project.
+  
+  **Update Dataset and model weights path according to your needs:**
+ I assume the dataset is located in the root directory of the project. If you place it in a different location, you will need to update the path at two locations in the code:
 
-**2\. Install Required Packages:**
+*   `data_path` variable in `app.py`
+*   Path argument in the `load_data` function (also in `app.py`)
 
-Once your virtual environment is activated, install the necessary packages using pip:
+ **Create and Activate Python Virtual Environment:**
+ It's recommended to create a virtual environment to isolate project dependencies. Here's an example using `venv`:
+```
+python -m venv venv
+source venv/bin/activate  # For Linux/macOS
+venv\\Scripts\\activate.bat  # For Windows
+```
+ **Install Dependencies:**
+  Activate your virtual environment and install the required packages listed in `requirements.txt`:
 
-Bash
+```
+pip install -r requirements.txt
+```
 
-`   pip install torch torchvision pandas opencv-python streamlit   `
+ **Run the Application:**
+ Start the Streamlit app by running:
 
-**3\. Run the Streamlit App (Optional, Assuming You Have app.py):**
+```
+streamlit run app.py
+```
 
-If you have a Streamlit app script named app.py in your project directory, you can run it directly:
-
-Bash
-
- `  streamlit run app.py   `
-
-This will launch the Streamlit app in your web browser, typically at http://localhost:8501.
+This will launch the application in your web browser, allowing you to upload images and see the model's predictions for marine debris and trash.
